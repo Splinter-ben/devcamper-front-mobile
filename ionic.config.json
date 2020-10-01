@@ -1,0 +1,7 @@
+{
+  "name": "dev-camp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
