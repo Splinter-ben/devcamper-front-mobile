@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Dashboard</ion-title>
+    <ion-back-button slot="start">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header lines="inset">
+    <ion-label>Choose a bootcamps</ion-label>
+    <ion-icon
+      class="reset"
+      name="refresh-outline"
+      (click)="resetBootcamps()"
+    ></ion-icon>
+
+    <ion-icon
+      name="funnel-outline"
+      class="sort"
+      (click)="presentAlertCheckboxSort()"
+    ></ion-icon>
+    <ion-icon
+      name="locate-outline"
+      class="locatte"
+      (click)="presentAlertPromptLocate()"
+    ></ion-icon>
+    <ion-icon
+      name="filter-outline"
+      class="filter"
+      (click)="presentAlertPromptFilter()"
+    ></ion-icon>
+  </ion-list-header>
+
+  <form [formGroup]="bootcampForm">
+    <input-select
+      multiple="true"
+      [form]="bootcampForm"
+      label="Advanced filter"
+      name="select"
+      option1="name"
+      option2="description"
+      option3="createdAt"
+      (ionChange)="onModelChange($event)"
+    >
+    </input-select>
+  </form>
+
+  <input-search></input-search>
+
+  <input-list
+    *ngFor="let bootcamp of bootcamps"
+    modalTitle="{{bootcamp?.name}}"
+    modalDescription="{{bootcamp?.description}}"
+    modalCreatedAt="{{bootcamp?.createdAt}}"
+  >
+  </input-list>
+
+  <ion-item>page
+    <ion-icon name="caret-back-outline" (click)="pagePrev()"></ion-icon>{{page}}
+    <ion-icon name="caret-forward-outline" (click)="pageNext()"></ion-icon>
+  </ion-item>
+</ion-content>

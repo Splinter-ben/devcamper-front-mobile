@@ -36,6 +36,9 @@
                 "input": "src/theme/variables.scss"
               },
               {
+                "input": "node_modules/sweetalert2/src/sweetalert2.scss"
+              },
+              {
                 "input": "src/global.scss"
               }
             ],
@@ -174,7 +177,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": "352042cd-cc66-405f-b0cf-82003cff2863"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

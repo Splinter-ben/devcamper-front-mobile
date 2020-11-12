@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Login</ion-title>
+    <ion-back-button slot="start">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <input-error [errorMessage]="errorMessage"></input-error>
+
+  <form
+    [formGroup]="loginForm"
+    class="loginForom"
+    (ngSubmit)="onSubtmit(loginForm.value)"
+  >
+    <input-text [form]="loginForm" type="email" name="email" label="Your email">
+    </input-text>
+
+    <input-text
+      [form]="loginForm"
+      type="password"
+      name="password"
+      label="Your password"
+    >
+    </input-text>
+
+    <input-submit type="submit" label="login">Login </input-submit>
+  </form>
+</ion-content>

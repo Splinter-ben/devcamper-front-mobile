@@ -1,0 +1,24 @@
+<div class="text">
+  <ion-item [formGroup]="form">
+    <ion-label position="stacked">{{ label }}</ion-label>
+    <input style="border: none" [type]="type" [formControlName]="name" />
+ <!--    <ion-text
+      color="danger"
+      *ngIf="form.controls[name].untouched && [form].submitted"
+      class="inputTextError"
+      >{{ errorRequiredLabel }}</ion-text
+    >
+        <ion-text
+      color="danger"
+      *ngIf="
+        form.controls[name].password !== form.controls[name].confirmPassword &&
+        [form].submitted
+      "
+      class="inputTextError"
+      >{{ errorConfirmPassword }}</ion-text
+    >  -->
+    <ion-text color="danger" *ngIf="form.controls[name].errors?.notSame"
+      ><h1>TEST</h1></ion-text
+    >
+  </ion-item>
+</div>

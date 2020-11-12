@@ -1,0 +1,11 @@
+<div class="select">
+  <ion-item [formGroup]="form">
+    <ion-label position="stacked">{{ label }}</ion-label>
+    <ion-select multiple="true" cancelText="Non" okText="Ok">
+      <input [formControlName]="name" />
+      <ion-select-option >{{ option1 }}</ion-select-option>
+      <ion-select-option >{{ option2 }}</ion-select-option>
+      <ion-select-option >{{ option3 }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</div>

@@ -1,0 +1,13 @@
+<div class="error">
+  <ion-item *ngIf="errorMessage">
+    <ion-label class="inputError">Error&nbsp;:</ion-label>
+    <container-element [ngSwitch]="errorMessage">
+      <span *ngSwitchCase="true">
+        An technical error has occurred. Please try to connect later
+      </span>
+      <span *ngSwitchDefault>
+        {{ errorMessage }}
+      </span>
+    </container-element>
+  </ion-item>
+</div>

@@ -1,0 +1,11 @@
+<div class="toggle">
+  <ion-item [formGroup]="form">
+    <ion-label>{{ label }}</ion-label>
+    <ion-toggle slot="end">  
+      <input
+        type="string"
+        [formControlName]="name"
+      />
+    </ion-toggle>
+  </ion-item>
+</div>

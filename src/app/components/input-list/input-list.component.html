@@ -1,0 +1,9 @@
+<div class="list">
+  <ion-list>
+    <ion-item>
+      <ion-icon name="camera-outline"></ion-icon>
+      <ion-label (click)="presentModal()">{{ modalTitle }}</ion-label>
+      <ion-label >{{ modalCreatedAt | date: 'dd/MM/yyyy' }}</ion-label>
+    </ion-item>
+  </ion-list>
+</div>

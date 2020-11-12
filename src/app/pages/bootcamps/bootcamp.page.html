@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Bootcamp</ion-title>
+    <ion-back-button slot="start">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form
+      [formGroup]="bootcampForm"
+      class="bootcampForm"
+      (ngSubmit)="onSubmit(bootcampForm?.value)"
+    >
+      <input-text
+        [form]="bootcampForm"
+        type="text"
+        label="Name"
+        name="name"
+      ></input-text>
+
+      <input-textarea
+        [form]="bootcampForm"
+        type="textarea"
+        label="Description"
+        name="description"
+      >
+      </input-textarea>
+
+      <input-toggle
+        [form]="bootcampForm"
+        label="Housing"
+        name="housing"
+        (ionChange)="housingValue($event.detail)"
+      >
+      </input-toggle>
+
+      <input-toggle
+        [form]="bootcampForm"
+        label="Job Assistance"
+        name="jobAssistance"
+        (ionChange)="jobAssistanceValue($event.detail)"
+      >
+      </input-toggle>
+
+      <input-toggle
+        [form]="bootcampForm"
+        label="Job Guarantee"
+        name="jobGuarantee"
+        (ionChange)="jobGuaranteeValue($event.detail)"
+      >
+      </input-toggle>
+
+      <input-toggle
+        [form]="bootcampForm"
+        label="Accept Gi"
+        name="acceptGi"
+        (ionChange)="acceptGivalue($event.detail)"
+      >
+      </input-toggle>
+      
+      <input-submit color="danger">Submit</input-submit>
+    </form>
+  </div>
+</ion-content>
