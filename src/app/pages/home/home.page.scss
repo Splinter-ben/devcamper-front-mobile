@@ -1,1 +1,40 @@
 @import './src/theme/mixins';
+
+.container {
+  @include container();
+}
+
+.grid {
+  @include grid();
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.showcase {
+  height: 400px;
+  background-color: var(--ion-color-primary-shade);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  @include grid();
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}

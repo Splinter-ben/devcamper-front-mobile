@@ -1,2 +1,21 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
+@mixin grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
+@mixin container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}

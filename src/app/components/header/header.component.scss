@@ -1,3 +1,33 @@
 @import '../../../theme/mixins.scss';
 
+.flex {
+  @include flex();
+}
 
+.container {
+  @include container();
+}
+
+.navbar {
+  background-color: var(--ion-color-primary-shade);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
