@@ -40,7 +40,7 @@
         bootcamps wit many technologies. You can aslo register has a publisher
         and create your own bootcamp
       </p>
-      <input-submit [routerLink]="['/']" color="light" fill="outline"
+      <input-submit class="btn-outline" [routerLink]="['/']" color="light" fill="outline"
         >Read More</input-submit
       >
     </div>
@@ -85,7 +85,7 @@
             type="password"
             label="Confirm password"
             name="confirmPassword"
-            errorConfirmPassword="Password doesn\' match !"
+            errorConfirmPassword="Passwords dont match !"
           ></input-text>
           <ion-text
             color="danger"
@@ -93,7 +93,7 @@
             >{{ errorConfirmPassword }}</ion-text
           >
         </div>
-        <input-submit type="submit" color="primary">Submit</input-submit>
+        <input-submit type="submit" color="primary">Send</input-submit>
       </form>
     </div>
   </div>

@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   title: string = 'DevCamper';
   registerForm: FormGroup;
   submitted = false;
-  errorConfirmPassword = `Password don't match`;
+  errorConfirmPassword = `Passwords don't match`;
 
   constructor(private formBuilder: FormBuilder) {}
 
