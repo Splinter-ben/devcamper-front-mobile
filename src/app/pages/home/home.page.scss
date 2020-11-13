@@ -49,7 +49,7 @@
 }
 
 .showcase::before, .showcase::after {
-  content: 'HELLO';
+  content: '';
   position: absolute;
   height: 100px;
   bottom: -70px;

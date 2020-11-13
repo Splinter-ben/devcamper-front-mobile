@@ -14,10 +14,12 @@ import { InputToggleComponent } from './components/input-toggle/input-toggle.com
 import { InputListComponent } from './components/input-list/input-list.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
 import { InputErrorComponent } from './components/input-error/input-error.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   declarations: [
+    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     InputSubmitComponent,
@@ -30,6 +32,7 @@ import { InputErrorComponent } from './components/input-error/input-error.compon
     InputErrorComponent,
   ],
   exports: [
+    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     InputSubmitComponent,
