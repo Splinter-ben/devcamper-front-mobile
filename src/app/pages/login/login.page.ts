@@ -8,7 +8,7 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 import { LoginResponse } from 'src/app/services/authentication/authentication.interface';
-import { LoginFormValues, REDIRECT_REASON } from './login.interface';
+import { LoginFormValues, REDIRECT_REASON } from '../home/login.interface';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: new FormControl('john.doe@gmail.com', {
+      email: new FormControl('john@gmail.com', {
         validators: [Validators.required, Validators.email],
       }),
       password: new FormControl('123456', {
@@ -55,7 +55,7 @@ export class LoginPage implements OnInit {
     this.showPassword = !this.showPassword;
   }
 
-  onSubtmit(values: LoginFormValues) {
+  onSubmit(values: LoginFormValues) {
     this.authService
       .login(values.email, values.password)
       .subscribe((result: LoginResponse) => {

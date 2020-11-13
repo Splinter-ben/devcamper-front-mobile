@@ -13,6 +13,10 @@
   @include card();
 }
 
+.text-center {
+  @include text-center();
+}
+
 .showcase {
   height: 400px;
   background-color: var(--ion-color-primary-shade);
@@ -24,6 +28,7 @@
   font-size: 40px;
 }
 
+/* Showcase */
 .showcase p {
   margin: 20px 0;
 }
@@ -44,11 +49,12 @@
   justify-self: flex-end;
 }
 
-.showcase-form input[type='text']{
+.showcase-form input[type='text'] {
   border: 0;
 }
 
-.showcase::before, .showcase::after {
+.showcase::before,
+.showcase::after {
   content: '';
   position: absolute;
   height: 100px;
@@ -57,4 +63,22 @@
   left: 0;
   background: #fff;
   transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+  padding-top: 100px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
 }

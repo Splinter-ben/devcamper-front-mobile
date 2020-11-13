@@ -1,100 +1,94 @@
-
 <app-layout class="layout">
   <!-- Showcase & register -->
-<section class="showcase">
-  <div class="container grid">
-    <div class="showcase-text">
-      <h1>Find the right bootcamp</h1>
-      <p>
-        With this website your will be able to find the best developper
-        bootcamps wit many technologies. You can aslo register has a publisher
-        and create your own bootcamp
-      </p>
-      <input-submit class="btn-outline" [routerLink]="['/']" color="light" fill="outline"
-        >Read More</input-submit
-      >
-    </div>
+  <section class="showcase">
+    <div class="container grid">
+      <div class="showcase-text">
+        <h1>Find the right bootcamp</h1>
+        <p>
+          With this website your will be able to find the best developper
+          bootcamps wit many technologies. You can aslo register has a publisher
+          and create your own bootcamp
+        </p>
+        <input-submit
+          class="btn-outline"
+          [routerLink]="['/']"
+          color="light"
+          fill="outline"
+          >Read More</input-submit
+        >
+      </div>
 
-    <div class="showcase-form card">
-      <h2>Register to join us</h2>
-      <form
-        [formGroup]="registerForm"
-        class="registerForm"
-        (ngSubmit)="onSubmit(registerForm?.value)"
-      >
-        <div class="form-control">
-          <input-text
-            [form]="registerForm"
-            type="text"
-            label="Name"
-            name="name"
-            errorRequiredLabel="Please add a name"
-          ></input-text>
-        </div>
-        <div class="form-control">
-          <input-text
-            [form]="registerForm"
-            type="text"
-            label="Email"
-            name="name"
-            errorRequiredLabel="Please add an email"
-          ></input-text>
-        </div>
-        <div class="form-control">
-          <input-text
-            [form]="registerForm"
-            type="password"
-            label="Password"
-            name="password"
-            errorRequiredLabel="Please add a password"
-          ></input-text>
-        </div>
-        <div class="form-control">
-          <input-text
-            [form]="registerForm"
-            type="password"
-            label="Confirm password"
-            name="confirmPassword"
-            errorConfirmPassword="Passwords dont match !"
-          ></input-text>
-          <ion-text
-            color="danger"
-            *ngIf="registerForm.errors?.notSame && (registerForm.controls['confirmPassword'].dirty || registerForm.controls['confirmPassword'].touched)"
-            >{{ errorConfirmPassword }}</ion-text
-          >
-        </div>
-        <input-submit type="submit" color="primary">Send</input-submit>
-      </form>
+      <div class="showcase-form card">
+        <h2>Login</h2>
+        <form
+          [formGroup]="loginForm"
+          class="loginForm"
+          (ngSubmit)="onSubmit(loginForm?.value)"
+        >
+          <div class="form-control">
+            <input-text
+              [form]="loginForm"
+              type="text"
+              label="Email"
+              name="email"
+              errorRequiredLabel="Please add an email"
+            ></input-text>
+          </div>
+          <div class="form-control">
+            <input-text
+              [form]="loginForm"
+              type="password"
+              label="Password"
+              name="password"
+              errorRequiredLabel="Please add a password"
+            ></input-text>
+          </div>
+          <div class="form-control">
+            <input-text
+              [form]="loginForm"
+              type="password"
+              label="Confirm password"
+              name="confirmPassword"
+              errorConfirmPassword="Passwords dont match !"
+            ></input-text>
+            <ion-text
+              color="danger"
+              *ngIf="loginForm.errors?.notSame && (loginForm.controls['confirmPassword'].dirty || loginForm.controls['confirmPassword'].touched)"
+              >{{ errorConfirmPassword }}</ion-text
+            >
+          </div>
+          <input-submit type="submit" color="primary">Send</input-submit>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Stats -->
-<!-- <section class="stats">
-  <div class="container">
-    <h3 class="stats-heading text-center my-1">Come and try a bootcamp !</h3>
-    <div class="grid grid-3 text-center my-4">
-      <div>
-        <ion-icon name="book" size="large"></ion-icon>
-        <h3>9</h3>
-        <p class="text-secondary">Bootcamps</p>
-      </div>
-      <div>
-        <ion-icon name="book-outline" size="large"></ion-icon>
-        <h3>15</h3>
-        <p class="text-secondary">Courses</p>
-      </div>
-      <div>
-        <ion-icon name="people" size="large"></ion-icon>
-        <h3>40</h3>
-        <p class="text-secondary">Users</p>
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <h3 class="stats-heading text-center my-1">Come and try a bootcamp !</h3>
+      <div class="grid grid-3 text-center my-4">
+        <div>
+          <ion-icon name="book" size="large"></ion-icon>
+          <h3>9</h3>
+          <p class="text-secondary">Bootcamps</p>
+        </div>
+        <div>
+          <ion-icon name="book-outline" size="large"></ion-icon>
+          <h3>15</h3>
+          <p class="text-secondary">Courses</p>
+        </div>
+        <div>
+          <ion-icon name="people" size="large"></ion-icon>
+          <h3>40</h3>
+          <p class="text-secondary">Users</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
- -->
-<!-- Cloud -->
-<!-- <section class="cloud bg-primary my2 py-2">
+  </section>
+
+  <!-- Cloud -->
+  <!-- <section class="cloud bg-primary my2 py-2">
   <div class="container grid">
     <div class="text-center">
       <h2 class="lg">Awesome visioning class</h2>
@@ -107,8 +101,8 @@
   </div>
 </section> -->
 
-<!-- Languages -->
-<!-- <section class="languages">
+  <!-- Languages -->
+  <!-- <section class="languages">
   <h2 class="md text-center my-2">Languages available</h2>
   <div class="container flex">
     <div class="card">
@@ -133,5 +127,4 @@
     </div>
   </div>
 </section> -->
-
 </app-layout>

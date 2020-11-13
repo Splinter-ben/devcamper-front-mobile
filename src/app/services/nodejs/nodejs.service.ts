@@ -44,6 +44,7 @@ export class NodeJsService {
     const path = `auth/login`;
     const options: HttpOptions = { ...this.options, ...requestHttpOptions };
     const body = { email, password };
+    console.log(body);
     return this.sendRequest('POST', path, options, body);
   }
 
