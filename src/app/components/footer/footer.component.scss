@@ -1,1 +1,26 @@
 @import '../../../theme/mixins.scss';
+
+.container {
+  @include container();
+}
+
+.grid {
+  @include grid();
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer {
+  color: #fff;
+  background: var(--ion-color-dark-tint);
+  & a {
+    color: #fff;
+  }
+}
+
+.footer .social a {
+  margin: 0 10px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
