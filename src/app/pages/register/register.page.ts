@@ -12,13 +12,14 @@ import { LoginFormValues, REDIRECT_REASON } from '../home/login.interface';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RegisterPage implements OnInit {
   loginForm: FormGroup;
   showPassword = false;
   errorMessage: string | boolean = null;
+  errorConfirmPassword = `Passwords don't match`;
 
   private nextUrl: string;
 

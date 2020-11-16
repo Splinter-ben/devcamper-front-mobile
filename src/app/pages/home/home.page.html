@@ -3,11 +3,11 @@
   <section class="showcase">
     <div class="container grid">
       <div class="showcase-text">
-        <h1>Find the right bootcamp</h1>
+        <h1>Find the bootcamp made for you</h1>
         <p>
           With this website your will be able to find the best developper
           bootcamps wit many technologies. You can aslo register has a publisher
-          and create your own bootcamp
+          and create your own bootcamp.
         </p>
         <input-submit
           class="btn-outline"
@@ -43,21 +43,7 @@
               errorRequiredLabel="Please add a password"
             ></input-text>
           </div>
-          <div class="form-control">
-            <input-text
-              [form]="loginForm"
-              type="password"
-              label="Confirm password"
-              name="confirmPassword"
-              errorConfirmPassword="Passwords dont match !"
-            ></input-text>
-            <ion-text
-              color="danger"
-              *ngIf="loginForm.errors?.notSame && (loginForm.controls['confirmPassword'].dirty || loginForm.controls['confirmPassword'].touched)"
-              >{{ errorConfirmPassword }}</ion-text
-            >
-          </div>
-          <input-submit type="submit" color="primary">Send</input-submit>
+          <input-submit type="submit" color="primary">Log In</input-submit>
         </form>
       </div>
     </div>
@@ -66,7 +52,8 @@
   <!-- Stats -->
   <section class="stats">
     <div class="container">
-      <h3 class="stats-heading text-center my-1">Come and try a bootcamp !</h3>
+      <h3 class="stats-heading text-center my-1">What are you waiting for... ?</h3>
+      <h2 class="text-center">Come and try a bootcamp !</h2>
       <div class="grid grid-3 text-center my-4">
         <div>
           <ion-icon name="book" size="large"></ion-icon>

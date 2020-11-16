@@ -1,0 +1,50 @@
+<app-layout>
+
+<section class="layout">
+  <input-error [errorMessage]="errorMessage"></input-error>
+
+  <div class="showcase-form card">
+    <h2>Login</h2>
+    <form
+      [formGroup]="loginForm"
+      class="loginForm"
+      (ngSubmit)="onSubmit(loginForm?.value)"
+    >
+      <div class="form-control">
+        <input-text
+          [form]="loginForm"
+          type="text"
+          label="Email"
+          name="email"
+          errorRequiredLabel="Please add an email"
+        ></input-text>
+      </div>
+      <div class="form-control">
+        <input-text
+          [form]="loginForm"
+          type="password"
+          label="Password"
+          name="password"
+          errorRequiredLabel="Please add a password"
+        ></input-text>
+      </div>
+      <div class="form-control">
+        <input-text
+          [form]="loginForm"
+          type="password"
+          label="Confirm password"
+          name="confirmPassword"
+          errorConfirmPassword="Passwords dont match !"
+        ></input-text>
+        <ion-text
+          color="danger"
+          *ngIf="loginForm.errors?.notSame && (loginForm.controls['confirmPassword'].dirty || loginForm.controls['confirmPassword'].touched)"
+          >{{ errorConfirmPassword }}</ion-text
+        >
+      </div>
+      <input-submit type="submit" color="primary">Log In</input-submit>
+    </form>
+  </div>
+</section>
+  
+</app-layout>

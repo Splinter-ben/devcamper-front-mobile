@@ -21,7 +21,6 @@ export class HomePage implements OnInit {
   showPassword = false;
   title: string = 'DevCamper';
   errorMessage: string | boolean = null;
-  errorConfirmPassword = `Passwords don't match`;
 
   private nextUrl: string;
 
@@ -35,17 +34,16 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group(
       {
-        email: new FormControl('john@gmail.com', {
+        email: new FormControl('', {
           validators: [Validators.required, Validators.email],
         }),
-        password: new FormControl('123456', {
+        password: new FormControl('', {
           validators: [Validators.required],
         }),
-        confirmPassword: new FormControl('123456', {
+        confirmPassword: new FormControl('', {
           validators: [Validators.required],
         }),
-      },
-      { validator: this.mustMatch }
+      }
     );
 
     this.nextUrl = this.route.snapshot.queryParams.nexturl || '/profile';
@@ -58,19 +56,10 @@ export class HomePage implements OnInit {
   }
 
   // convenience getter for easy access to form fields
-  get f() {
+  get form() {
     return this.loginForm.controls;
   }
   
-  /**
-   * Check if the passwords match
-   * @param loginForm
-   */
-  mustMatch(loginForm: FormGroup) {
-    let password = loginForm.get('password').value;
-    let confirmPassword = loginForm.get('confirmPassword').value;
-    return password === confirmPassword ? null : { notSame: true };
-  }
 
   /**
    * Hide/Show the password

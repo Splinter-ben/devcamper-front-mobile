@@ -8,6 +8,11 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'modal',
+    loadChildren: () =>
+      import('./components/modal/modal.module').then((m) => m.ModalPageModule),
+  },
+  {
     path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomePageModule),
@@ -20,9 +25,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'login',
+    path: 'register',
     loadChildren: () =>
-      import('./pages/login/login.module').then((m) => m.LoginPageModule),
+      import('./pages/register/register.module').then((m) => m.LoginPageModule),
   },
   {
     path: 'dashboard',
@@ -32,18 +37,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'modal',
-    loadChildren: () =>
-      import('./components/modal/modal.module').then((m) => m.ModalPageModule),
-  },
-  {
     path: 'courses',
     loadChildren: () =>
       import('./pages/courses/courses.module').then((m) => m.CoursesPageModule),
   },
   {
     path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfilePageModule),
   },
 ];
 
